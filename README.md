@@ -10,8 +10,6 @@ Hệ thống sử dụng mô hình **Multi-Layer Filtering** (Lọc đa lớp) �
 
 ### Quy trình xử lý (Logic Flow)
 
-Dưới đây là toàn bộ mã nguồn Markdown để bạn copy trực tiếp vào file `README.md`. Tôi đã lồng ghép các biểu đồ Mermaid, bảng biểu và danh sách công việc để tài liệu trông chuyên nghiệp và dễ theo dõi trên GitHub.
-
 ```markdown
 # 🛡️ Project: Web Shield 18+ (Ultimate Content Filter)
 
@@ -24,6 +22,7 @@ Dưới đây là toàn bộ mã nguồn Markdown để bạn copy trực tiếp
 Hệ thống sử dụng mô hình **Multi-Layer Filtering** (Lọc đa lớp) để đảm bảo không một nội dung xấu nào lọt qua mà vẫn giữ được tốc độ duyệt web mượt mà.
 
 ### Quy trình xử lý (Logic Flow)
+
 ```mermaid
 graph TD
     A[Người dùng nhập URL/Click link] --> B{Lớp 1: Static Filter<br/>DNR Engine}
@@ -39,7 +38,6 @@ graph TD
     
     G --> C
     H --> I([Kết thúc quy trình])
-
 ```
 
 ---
