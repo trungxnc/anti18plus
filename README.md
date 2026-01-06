@@ -1,15 +1,3 @@
-# 🛡️ Project: Web Shield 18+ (Ultimate Content Filter)
-
-**Web Shield 18+** là một Browser Extension thế hệ mới, được thiết kế để bảo vệ người dùng khỏi các nội dung không phù hợp. Dự án tập trung vào 3 trụ cột: **Hiệu suất cực cao**, **Bảo mật quyền riêng tư** và **Trí tuệ nhân tạo (Local AI)**.
-
----
-
-## 🏗️ 1. Kiến trúc hệ thống (Architecture)
-
-Hệ thống sử dụng mô hình **Multi-Layer Filtering** (Lọc đa lớp) để đảm bảo không một nội dung xấu nào lọt qua mà vẫn giữ được tốc độ duyệt web mượt mà.
-
-### Quy trình xử lý (Logic Flow)
-
 ```markdown
 # 🛡️ Project: Web Shield 18+ (Ultimate Content Filter)
 
@@ -38,6 +26,7 @@ graph TD
     
     G --> C
     H --> I([Kết thúc quy trình])
+
 ```
 
 ---
@@ -149,9 +138,3 @@ erDiagram
 
 **Đóng góp:** Mọi Pull Request đều được chào đón nhằm xây dựng môi trường mạng an toàn hơn.
 **Ngày khởi tạo:** 06/01/2026
-
-```
-
-Bạn có thể lưu nội dung này vào file `README.md` trong thư mục gốc của dự án. **Tiếp theo, bạn có muốn tôi hướng dẫn cấu trúc thư mục chi tiết để bắt đầu code phần Extension không?**
-
-```
