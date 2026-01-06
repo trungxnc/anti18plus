@@ -1,4 +1,4 @@
-```markdown
+
 # 🛡️ Project: Web Shield 18+ (Ultimate Content Filter)
 
 **Web Shield 18+** là một Browser Extension thế hệ mới, được thiết kế để bảo vệ người dùng khỏi các nội dung không phù hợp. Dự án tập trung vào 3 trụ cột: **Hiệu suất cực cao**, **Bảo mật quyền riêng tư** và **Trí tuệ nhân tạo (Local AI)**.
