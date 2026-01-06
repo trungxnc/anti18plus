@@ -73,8 +73,8 @@ erDiagram
 | --- | --- | --- |
 | **Extension** | JavaScript (Manifest V3) | Tối ưu hóa hiệu suất và bảo mật trình duyệt. |
 | **AI Engine** | TensorFlow.js (NSFW-JS) | Nhận diện ảnh 18+ trực tiếp trên GPU máy khách. |
-| **Backend** | Java 21 (Spring Boot 3) | Xử lý logic nghiệp vụ và đồng bộ dữ liệu lớn. |
-| **Database** | Oracle / PostgreSQL | Lưu trữ danh sách chặn và nhật ký truy cập. |
+| **Backend** | Node.js (Fastify) | Siêu nhẹ, tiêu tốn ít RAM (<100MB), xử lý JSON cực nhanh. |
+| **Database** | PostgreSQL + Redis | Lưu trữ bền vững kết hợp với Cache để tăng tốc truy xuất. |
 | **DevOps** | Docker, GitHub Actions | Triển khai nhanh chóng và tự động hóa. |
 
 ---
