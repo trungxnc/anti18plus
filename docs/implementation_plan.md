@@ -41,6 +41,35 @@ Integrate client-side AI analysis to detect and block explicit content (images) 
 *   **WASM Backend**: Switch from CPU to `tf-backend-wasm` for substantial speedup (10x-20x) on image inference.
 *   **Web Workers**: (Optional) Move inference to a background thread to prevent UI freezing.
 
+## Phase 4: Fake News & Misinformation Detection (New)
+
+### Goal
+Alert users when they visit known misinformation sources or view articles with high "clickbait/fake" probability.
+
+### Proposed Changes
+
+#### 1. Domain Reputation System (Static)
+*   **Database**: Integrate open-source lists of low-credibility domains (e.g., IFFY, OpenSources).
+*   **Mechanism**:
+    *   Check `window.location.hostname` against the bundled blocklist.
+    *   If matched -> Show a "Low Credibility Source" warning banner (dismissible).
+    *   **Vietnamese Blacklist**: Integrate lists from **tinnhiemmang.vn** (NCSC) and **ChongLuadao**.
+
+#### 2. AI Text Analysis (Dynamic)
+*   **Training Guide**: See detailed instructions in [`docs/tfjs_training_guide.md`](file:///d:/Sample/anti18plus/docs/tfjs_training_guide.md).
+*   **Model**:
+    *   **Option A (Lightweight)**: Custome LSTM/Embedding trained on VFND/ReINTEL datasets.
+    *   **Option B**: DistilBERT (quantized) converted to TFJS (higher accuracy, larger download ~30MB).
+    *   *Recommendation*: Option A (Custom LSTM) for optimal performance/size balance.
+*   **Workflow**:
+    1.  Extract Article Title (`<h1>`, `<title>`) and Content (`<article>` or `p` tags).
+    2.  Run inference in `content.js` (or Web Worker).
+    3.  If `FakeScore > 0.8` -> Alert user: "This article shows signs of misleading content."
+
+### Verification
+1.  **Unit Tests**: Test text classifier with known true/fake headlines.
+2.  **Integration**: Visit known satire sites (e.g., The Onion) -> Verify warning appears.
+
 ## Verification Plan
 
 ### Manual Testing
@@ -51,3 +80,14 @@ Integrate client-side AI analysis to detect and block explicit content (images) 
 ### Resources
 *   TF.js Graph Model (MobileNet V2)
 *   [NSFWJS GitHub](https://github.com/infinitered/nsfwjs) - Original model source and training data.
+*   **Fake News Resources**:
+    *   [Fake News Detector (Extension)](https://github.com/topics/fake-news-detector-extension)
+    *   [Newsful Extension](https://github.com/centille/newsful)
+    *   [Detect-Fake-News-TFJS](https://github.com/tensorflow/tfjs-examples/tree/master/sentiment) (Sentiment example can be adapted)
+    *   [Kaggle Fake News Dataset](https://www.kaggle.com/c/fake-news/data) for training custom models.
+    *   **Vietnamese Datasets**:
+        *   [VFND (Vietnamese Fake News Dataset)](https://github.com/WhySchools/VFND-vietnamese-fake-news-datasets)
+        *   ReINTEL Dataset (Social Listening).
+    *   **Vietnamese Blacklists**:
+        *   [Tin Nhiệm Mạng (NCSC)](https://tinnhiemmang.vn/website-lua-dao)
+        *   [ChongLuaDao](https://chongluadao.vn/)
