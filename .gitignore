@@ -1,0 +1,27 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor directories
+.vscode/
+.idea/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Node modules (if any future npm usage)
+node_modules/
+package-lock.json
+
+# Optional: Ignore heavy model files if tracking them elsewhere
+# (Commented out to include them in the repo)
+# extension/models/quantized/
+
+# Optional: Ignore downloaded libraries (Re-download via update_libs.py)
+# (Commented out so the repo works out-of-the-box)
+# extension/lib/tf-*.js
+# extension/lib/*.wasm
+
+# Logs
+*.log

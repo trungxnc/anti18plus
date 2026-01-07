@@ -1,0 +1,7 @@
+com\webshield\api\service\DomainService.class
+com\webshield\api\WebShieldApplication.class
+com\webshield\api\config\DataSeeder.class
+com\webshield\api\controller\DomainController.class
+com\webshield\api\model\Domain.class
+com\webshield\api\repository\DomainRepository.class
+com\webshield\api\model\Domain$DomainCategory.class

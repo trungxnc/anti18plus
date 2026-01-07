@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "priority": 1,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "extensionPath": "/pages/blocked.html"
+            }
+        },
+        "condition": {
+            "urlFilter": "example.com",
+            "resourceTypes": [
+                "main_frame"
+            ]
+        }
+    },
+    {
+        "id": 2,
+        "priority": 1,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "extensionPath": "/pages/blocked.html"
+            }
+        },
+        "condition": {
+            "urlFilter": "test-porn-site.com",
+            "resourceTypes": [
+                "main_frame"
+            ]
+        }
+    }
+]

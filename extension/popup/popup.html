@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Shield 18+</title>
+    <link rel="stylesheet" href="popup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <span class="shield-icon">🛡️</span>
+                <h1>Web Shield</h1>
+            </div>
+            <div class="status-indicator" id="statusIndicator">
+                <span class="dot"></span>
+                <span class="text" id="statusText">Active</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="card">
+                <div class="card-header">
+                    <h2>Protection Status</h2>
+                    <label class="switch">
+                        <input type="checkbox" id="toggleShield" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <p class="description">Your browser is protected against harmful content.</p>
+            </div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="count" id="blockedCount">0</span>
+                    <span class="label">Blocked</span>
+                </div>
+                <div class="stat-item">
+                    <span class="count" id="scannedCount">0</span>
+                    <span class="label">Scanned</span>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: 15px;">
+                <div class="card-header">
+                    <h2>Filter Settings</h2>
+                </div>
+                <div class="filter-options">
+                    <label class="filter-checkbox"><input type="checkbox" id="checkPorn" checked> Porn</label>
+                    <label class="filter-checkbox"><input type="checkbox" id="checkHentai" checked> Hentai</label>
+                    <label class="filter-checkbox"><input type="checkbox" id="checkSexy" checked> Sexy</label>
+                    <label class="filter-checkbox"><input type="checkbox" id="checkDrawing"> Drawing</label>
+                    <label class="filter-checkbox"><input type="checkbox" id="checkNeutral"> Neutral</label>
+                </div>
+
+                <div style="margin-top: 15px; border-top: 1px solid #eee; padding-top: 10px;">
+                    <label for="thresholdRange"
+                        style="font-size: 13px; font-weight: 600; display: block; margin-bottom: 5px;">
+                        Sensitivity: <span id="thresholdValue">60</span>%
+                    </label>
+                    <input type="range" id="thresholdRange" min="0" max="100" value="60" style="width: 100%;">
+                    <p style="font-size: 10px; color: #666; margin-top: 2px;">Lower = stricter blocking</p>
+                </div>
+                <div style="margin-top: 15px; border-top: 1px solid #eee; padding-top: 10px;">
+                    <button id="btnRescan"
+                        style="width: 100%; padding: 8px; background: #4caf50; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: 600;">
+                        ⟳ Save & Rescan Page
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <a href="#" id="settingsLink">Settings</a>
+            <span class="version">v1.0.0</span>
+        </footer>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>

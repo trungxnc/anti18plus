@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Shield 18+ Settings</title>
+    <link rel="stylesheet" href="options.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="layout">
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="shield">🛡️</span>
+                <h1>Web Shield</h1>
+            </div>
+            <nav>
+                <button class="nav-item active" data-tab="dashboard">Dashboard</button>
+                <button class="nav-item" data-tab="blacklist">Blacklist</button>
+                <button class="nav-item" data-tab="whitelist">Whitelist</button>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <section id="dashboard" class="tab-content active">
+                <h2>Dashboard</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total Blocked</h3>
+                        <span class="value" id="totalBlocked">0</span>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Custom Rules</h3>
+                        <span class="value" id="customRulesCount">0</span>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Sync Status</h3>
+                        <button id="forceSyncBtn" class="btn primary">Sync Now</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="blacklist" class="tab-content">
+                <h2>Custom Blacklist</h2>
+                <p>Add domains you want to block permanently.</p>
+                <div class="input-group">
+                    <input type="text" id="blacklistInput" placeholder="example.com">
+                    <button id="addBlacklistBtn" class="btn primary">Add Domain</button>
+                </div>
+                <ul id="blacklistList" class="domain-list">
+                    <!-- List Items -->
+                </ul>
+            </section>
+
+            <section id="whitelist" class="tab-content">
+                <h2>Whitelist</h2>
+                <p>Allowed domains that will never be blocked.</p>
+                <div class="input-group">
+                    <input type="text" id="whitelistInput" placeholder="trusted-site.com">
+                    <button id="addWhitelistBtn" class="btn success">Add Domain</button>
+                </div>
+                <ul id="whitelistList" class="domain-list">
+                    <!-- List Items -->
+                </ul>
+            </section>
+        </main>
+    </div>
+    <script src="options.js"></script>
+</body>
+
+</html>
